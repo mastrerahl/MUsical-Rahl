@@ -1,58 +1,43 @@
 // app.js
 
-const musicList = document.getElementById("music-list");
-const searchInput = document.getElementById("search");
+async function searchSongs() {
+  const query = document.getElementById("searchInput").value.trim();
+  const resultsContainer = document.getElementById("results");
 
-// Sample songs (you can load from Firebase or JSON later)
-const songs = [
-  {
-    title: "Royal Anthem",
-    artist: "Rahl Empire",
-    cover: "https://i.imgur.com/k9qP8VR.jpg",
-    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-  },
-  {
-    title: "Victory Chant",
-    artist: "Lord Rahl",
-    cover: "https://i.imgur.com/QkP62mM.jpg",
-    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-  },
-  {
-    title: "Rise of the Throne",
-    artist: "Golden Reign",
-    cover: "https://i.imgur.com/jTF7sFQ.jpeg",
-    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+  if (!query) return alert("Type a song title to search!");
+
+  resultsContainer.innerHTML = `<p style="text-align:center">Searching for "${query}"...</p>`;
+
+  try {
+    const response = await fetch(`https://yt-api.pr0gramm.space/api/search?q=${encodeURIComponent(query)}`);
+    const data = await response.json();
+
+    if (!data.items || data.items.length === 0) {
+      return resultsContainer.innerHTML = `<p style="text-align:center">No results found for "${query}"</p>`;
+    }
+
+    // Render cards
+    resultsContainer.innerHTML = "";
+    data.items.slice(0, 6).forEach(item => {
+      const videoId = item.id;
+      const title = item.title;
+      const thumbnail = item.thumbnail.url;
+
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${thumbnail}" alt="${title}">
+        <h3>${title}</h3>
+        <audio controls src="https://yt-api.pr0gramm.space/api/audio/${videoId}"></audio>
+        <br><br>
+        <a href="https://yt-api.pr0gramm.space/api/audio/${videoId}" download>
+          <button>Download MP3</button>
+        </a>
+      `;
+      resultsContainer.appendChild(card);
+    });
+  } catch (error) {
+    console.error(error);
+    resultsContainer.innerHTML = `<p style="text-align:center;color:red">An error occurred. Try again later.</p>`;
   }
-];
-
-// Render songs into HTML
-function displaySongs(songArray) {
-  musicList.innerHTML = "";
-  songArray.forEach(song => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="${song.cover}" alt="${song.title}">
-      <h3>${song.title}</h3>
-      <p>${song.artist}</p>
-      <audio controls src="${song.audio}"></audio>
-      <a href="${song.audio}" download>
-        <button>Download</button>
-      </a>
-    `;
-    musicList.appendChild(card);
-  });
 }
-
-// Live search filtering
-searchInput.addEventListener("input", () => {
-  const keyword = searchInput.value.toLowerCase();
-  const filtered = songs.filter(song =>
-    song.title.toLowerCase().includes(keyword) ||
-    song.artist.toLowerCase().includes(keyword)
-  );
-  displaySongs(filtered);
-});
-
-// Initial load
-displaySongs(songs);
