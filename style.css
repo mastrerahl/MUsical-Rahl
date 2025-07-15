@@ -1,66 +1,61 @@
-/* style.css */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Royal Theme */
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #0b0b0b;
-  color: #f9f9f9;
-  line-height: 1.6;
+  color: #fff;
 }
 
 header {
-  text-align: center;
-  padding: 20px;
   background: #111;
+  padding: 20px;
+  text-align: center;
   border-bottom: 2px solid gold;
 }
 
-h1 {
+header h1 {
   color: gold;
-  font-size: 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-header p {
-  color: #ccc;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-#search {
-  width: 90%;
-  max-width: 400px;
+header input {
   padding: 10px;
+  width: 80%;
+  max-width: 400px;
   border-radius: 8px;
-  border: 1px solid #444;
-  background: #1a1a1a;
-  color: white;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+
+button {
+  background: gold;
+  color: #111;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffd700;
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 20px;
+  display: grid;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .card {
   background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 12px;
   padding: 15px;
+  border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
 }
 
 .card img {
@@ -68,46 +63,17 @@ main {
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
 .card h3 {
+  margin: 10px 0 5px;
   color: gold;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.card p {
-  color: #ccc;
-  margin-bottom: 10px;
-}
-
-audio {
-  width: 100%;
-  margin: 10px 0;
-}
-
-button {
-  background: gold;
-  color: #0b0b0b;
-  font-weight: bold;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #ffcc00;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-size: 0.9rem;
-  color: #888;
+  color: #999;
   background: #111;
-  border-top: 1px solid #222;
-  margin-top: 20px;
 }
