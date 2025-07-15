@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎶 Musical Rahl</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🎶 Musical Rahl</h1>
-    <p>Search & download your favorite songs 👑</p>
-    <input type="text" id="searchInput" placeholder="e.g. Asake – Amapiano">
-    <button onclick="searchMusic()">Search</button>
-  </header>
+  <div class="container">
+    
+    <!-- 👑 Logo / Image Banner -->
+    <img src="https://i.imgur.com/Vu7yW7U.png" alt="Musical Rahl" class="logo" />
 
-  <main id="results">
-    <p style="text-align:center;color:gray">Type any song above to start searching...</p>
-  </main>
+    <!-- 🔍 Search Bar -->
+    <h1>Search your music</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="e.g. Amapiano, Burna Boy..." />
+      <button onclick="searchMusic()">Search</button>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Lord Rahl Music Empire</p>
-  </footer>
+    <!-- 🎧 Results -->
+    <div id="results" class="results-area">
+      <p>Type a song name and tap Search</p>
+    </div>
 
-  <script src="app.js"></script>
+    <footer>
+      <p>&copy; 2025 Lord Rahl Music Empire 👑</p>
+    </footer>
+  </div>
+
+  <script>
+    function searchMusic() {
+      const query = document.getElementById("searchInput").value.trim();
+      if (!query) return alert("Please enter a song name.");
+      const encoded = encodeURIComponent(query);
+      window.open(`https://ytmp3.to/youtube?q=${encoded}`, "_blank");
+    }
+  </script>
 </body>
 </html>
