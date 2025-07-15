@@ -4,14 +4,16 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstati
 import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR-API-KEY",
-  authDomain: "YOUR-DOMAIN.firebaseapp.com",
-  projectId: "YOUR-PROJECT-ID",
-  storageBucket: "YOUR-BUCKET.appspot.com",
-  messagingSenderId: "YOUR-SENDER-ID",
-  appId: "YOUR-APP-ID"
+  apiKey: "AIzaSyBZ6drRWnTC88fgdK6DfKntGyDx9qk3_LA",
+  authDomain: "musical-rahl.firebaseapp.com",
+  projectId: "musical-rahl",
+  storageBucket: "musical-rahl.appspot.com",
+  messagingSenderId: "438048078383",
+  appId: "1:438048078383:web:41916937d866366ce324da",
+  measurementId: "G-XMX3ZGCD4J"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
@@ -32,10 +34,10 @@ form.addEventListener("submit", async (e) => {
     return status.innerText = "Please fill in all fields.";
   }
 
-  status.innerText = "Uploading...";
+  status.innerText = "Uploading to Rahl Library...";
 
   try {
-    // Upload files to Firebase Storage
+    // Upload files
     const coverRef = ref(storage, `covers/${Date.now()}-${coverFile.name}`);
     const audioRef = ref(storage, `audios/${Date.now()}-${audioFile.name}`);
 
@@ -45,7 +47,7 @@ form.addEventListener("submit", async (e) => {
     const coverURL = await getDownloadURL(coverRef);
     const audioURL = await getDownloadURL(audioRef);
 
-    // Save to Firestore
+    // Save song metadata to Firestore
     await addDoc(collection(db, "songs"), {
       title,
       artist,
@@ -53,10 +55,10 @@ form.addEventListener("submit", async (e) => {
       audio: audioURL
     });
 
-    status.innerText = "Uploaded successfully 👑";
+    status.innerText = "✅ Song uploaded successfully 👑";
     form.reset();
-  } catch (err) {
-    console.error(err);
-    status.innerText = "Upload failed. Try again.";
+  } catch (error) {
+    console.error("Upload error:", error);
+    status.innerText = "❌ Upload failed. Try again.";
   }
 });
