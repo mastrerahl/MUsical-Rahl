@@ -2,6 +2,7 @@
   "name": "musical-rahl-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "yt-search": "^2.10.6"
   }
