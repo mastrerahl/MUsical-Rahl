@@ -20,7 +20,22 @@
       <button onclick="searchMusic()">Search</button>
     </div>
 
-    <!-- 🎧 Results Area -->
+    <!-- 🎧 Suggested Songs (like Tubidy) -->
+    <div class="suggestions-area">
+      <h3>Trending Searches</h3>
+      <ul class="suggestions-list">
+        <li onclick="searchSuggested('Burna Boy Last Last')">Burna Boy – Last Last</li>
+        <li onclick="searchSuggested('Amapiano Mix 2025')">Amapiano Mix 2025</li>
+        <li onclick="searchSuggested('Davido Unavailable')">Davido – Unavailable</li>
+        <li onclick="searchSuggested('Rema Calm Down')">Rema – Calm Down</li>
+        <li onclick="searchSuggested('Ayra Starr Rush')">Ayra Starr – Rush</li>
+        <li onclick="searchSuggested('Focalistic Ke Star')">Focalistic – Ke Star</li>
+        <li onclick="searchSuggested('Fireboy Peru')">Fireboy – Peru</li>
+        <li onclick="searchSuggested('Wizkid Essence')">Wizkid – Essence</li>
+      </ul>
+    </div>
+
+    <!-- 🔍 Results Area -->
     <div id="results" class="results-area">
       <p>Type a song name and tap Search</p>
     </div>
@@ -30,6 +45,18 @@
     </footer>
   </div>
 
-  <script src="app.js"></script>
+  <script>
+    function searchMusic() {
+      const query = document.getElementById("searchInput").value.trim();
+      if (!query) return alert("Please enter a song name.");
+      const encoded = encodeURIComponent(query);
+      window.open(`https://ytmp3.to/youtube?q=${encoded}`, "_blank");
+    }
+
+    function searchSuggested(song) {
+      document.getElementById("searchInput").value = song;
+      searchMusic();
+    }
+  </script>
 </body>
 </html>
