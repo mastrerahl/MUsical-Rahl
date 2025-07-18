@@ -9,11 +9,12 @@ body {
 
 .container {
   padding: 20px;
-  border-radius: 16px;
-  margin: 20px auto;
+  border: none;               /* ❌ No border */
+  border-radius: 0;           /* ❌ No rounded box */
+  margin: 0 auto;             /* Centered */
   max-width: 600px;
+  box-shadow: none;           /* ❌ Remove all outer shadow */
   background-color: transparent;
-  /* Removed blue border & shadow */
 }
 
 .logo {
@@ -21,7 +22,7 @@ body {
   margin: 20px auto;
   display: block;
   border-radius: 16px;
-  box-shadow: 0 0 30px #007bff; /* Blue glow */
+  box-shadow: 0 0 30px #007bff; /* ✅ Keep image glow */
 }
 
 h1 {
