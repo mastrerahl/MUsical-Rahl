@@ -9,10 +9,10 @@ body {
 
 .container {
   padding: 20px;
-  border: 3px solid royalblue;
+  border: 3px solid #007bff; /* Blue border */
   border-radius: 16px;
   margin: 20px;
-  box-shadow: 0 0 20px royalblue;
+  box-shadow: 0 0 30px #007bff; /* Blue shadow */
 }
 
 .logo {
@@ -20,7 +20,7 @@ body {
   margin: 20px auto;
   display: block;
   border-radius: 16px;
-  box-shadow: 0 0 25px royalblue;
+  box-shadow: 0 0 30px #007bff; /* Blue glow */
 }
 
 h1 {
@@ -36,20 +36,22 @@ h1 {
 .search-box input {
   padding: 10px;
   width: 250px;
-  border: 2px solid royalblue;
+  border: 2px solid #007bff; /* Blue input border */
   border-radius: 5px;
   background-color: #111;
   color: white;
+  box-shadow: 0 0 10px #007bff;
 }
 
 .search-box button {
   padding: 10px 20px;
-  background-color: royalblue;
+  background-color: #007bff; /* Blue button */
   border: none;
   border-radius: 5px;
   font-weight: bold;
   color: white;
   cursor: pointer;
+  box-shadow: 0 0 10px #007bff;
 }
 
 .results-area {
