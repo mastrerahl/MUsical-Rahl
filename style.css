@@ -9,6 +9,10 @@ body {
 
 .container {
   padding: 20px;
+  border: 3px solid royalblue;
+  border-radius: 16px;
+  margin: 20px;
+  box-shadow: 0 0 20px royalblue;
 }
 
 .logo {
@@ -16,12 +20,13 @@ body {
   margin: 20px auto;
   display: block;
   border-radius: 16px;
-  box-shadow: 0 0 20px gold;
+  box-shadow: 0 0 25px royalblue;
 }
 
 h1 {
   font-size: 28px;
   margin-top: 10px;
+  color: gold;
 }
 
 .search-box {
@@ -31,7 +36,7 @@ h1 {
 .search-box input {
   padding: 10px;
   width: 250px;
-  border: 2px solid gold;
+  border: 2px solid royalblue;
   border-radius: 5px;
   background-color: #111;
   color: white;
@@ -39,10 +44,11 @@ h1 {
 
 .search-box button {
   padding: 10px 20px;
-  background-color: gold;
+  background-color: royalblue;
   border: none;
   border-radius: 5px;
   font-weight: bold;
+  color: white;
   cursor: pointer;
 }
 
