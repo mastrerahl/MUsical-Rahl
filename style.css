@@ -9,59 +9,55 @@ body {
 
 .container {
   padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
 }
 
 .logo {
   width: 260px;
   margin: 20px auto;
   display: block;
-  border-radius: 16px;
-  box-shadow: 0 0 30px #007bff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #007bff;
 }
 
 h1 {
-  font-size: 28px;
-  margin-top: 10px;
+  font-size: 26px;
   color: gold;
+  margin: 10px 0;
 }
 
 .search-box {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .search-box input {
   padding: 10px;
   width: 250px;
   border: 2px solid #007bff;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #111;
   color: white;
-  box-shadow: 0 0 10px #007bff;
 }
 
 .search-box button {
-  padding: 10px 20px;
+  padding: 10px 18px;
   background-color: #007bff;
   border: none;
-  border-radius: 5px;
+  color: white;
   font-weight: bold;
-  color: white;
+  border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 0 10px #007bff;
-}
-
-.results-area {
-  margin-top: 30px;
-  color: white;
 }
 
 .suggestions-area {
-  margin-top: 30px;
+  margin-top: 40px;
   background-color: #111;
-  border-radius: 12px;
-  padding: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #007bff;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .suggestions-area h3 {
@@ -76,25 +72,23 @@ h1 {
 }
 
 .suggestions-list li {
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
   background: #000;
   border: 1px solid #007bff;
-  border-radius: 8px;
+  margin: 6px 0;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
-  transition: 0.2s ease;
-  display: block;
+  transition: 0.2s;
 }
 
 .suggestions-list li:hover {
   background: #007bff;
-  color: white;
-  font-weight: bold;
+  color: gold;
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 14px;
   color: gray;
 }
