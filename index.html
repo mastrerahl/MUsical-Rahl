@@ -9,44 +9,44 @@
 </head>
 <body>
   <div class="container">
+    <!-- 👑 Royal Banner Image -->
+    <img src="rahl-banner.png" alt="Musical Rahl Banner" class="logo" />
 
-    <!-- 👑 Banner -->
-    <img src="banner.png" alt="Musical Rahl Banner" class="logo" />
-
-    <!-- 🔍 Search Music -->
-    <h1>Search Your Music</h1>
+    <!-- 🎼 Title + Search -->
+    <h1>Search your music</h1>
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="e.g. Amapiano, Burna Boy..." />
       <button onclick="searchMusic()">Search</button>
     </div>
 
-    <!-- 💡 Suggestions -->
+    <!-- 🔥 Suggested Songs -->
     <div class="suggestions-area">
-      <h3>🔥 Trending Searches</h3>
+      <h3>🔥 Suggested Downloads</h3>
       <ul class="suggestions-list">
-        <li onclick="setQuery('Amapiano')">Amapiano</li>
-        <li onclick="setQuery('Burna Boy')">Burna Boy</li>
-        <li onclick="setQuery('Davido Unavailable')">Davido - Unavailable</li>
-        <li onclick="setQuery('Diamond Platnumz')">Diamond Platnumz</li>
+        <li onclick="searchSuggestion('Burna Boy - Last Last')">Burna Boy - Last Last</li>
+        <li onclick="searchSuggestion('Davido - Unavailable')">Davido - Unavailable</li>
+        <li onclick="searchSuggestion('Asake - Terminator')">Asake - Terminator</li>
+        <li onclick="searchSuggestion('Rema - Calm Down')">Rema - Calm Down</li>
+        <li onclick="searchSuggestion('Ayra Starr - Rush')">Ayra Starr - Rush</li>
+        <li onclick="searchSuggestion('Diamond Platnumz - Jeje')">Diamond Platnumz - Jeje</li>
+        <li onclick="searchSuggestion('Otile Brown - Dusuma')">Otile Brown - Dusuma</li>
+        <li onclick="searchSuggestion('Sauti Sol - Suzanna')">Sauti Sol - Suzanna</li>
+        <li onclick="searchSuggestion('Nadia Mukami - Radio Love')">Nadia Mukami - Radio Love</li>
+        <li onclick="searchSuggestion('Zuchu - Sukari')">Zuchu - Sukari</li>
+        <li onclick="searchSuggestion('Rayvanny - Tetema')">Rayvanny - Tetema</li>
+        <li onclick="searchSuggestion('Fally Ipupa - Eloko')">Fally Ipupa - Eloko</li>
+        <li onclick="searchSuggestion('Tiwa Savage - Somebody’s Son')">Tiwa Savage - Somebody’s Son</li>
+        <li onclick="searchSuggestion('Wizkid - Essence')">Wizkid - Essence</li>
+        <li onclick="searchSuggestion('BNXN - Gwagwalada')">BNXN - Gwagwalada</li>
+        <li onclick="searchSuggestion('Kizz Daniel - Buga')">Kizz Daniel - Buga</li>
+        <li onclick="searchSuggestion('Fireboy DML - Peru')">Fireboy DML - Peru</li>
+        <li onclick="searchSuggestion('Mr Eazi - Leg Over')">Mr Eazi - Leg Over</li>
+        <li onclick="searchSuggestion('Mbosso - Huyu Hapa')">Mbosso - Huyu Hapa</li>
+        <li onclick="searchSuggestion('King Kaka - Wajinga Nyinyi')">King Kaka - Wajinga Nyinyi</li>
       </ul>
     </div>
 
-    <!-- 🔗 Link Downloader -->
-    <div class="link-download-area">
-      <h3>🎯 Paste YouTube Link to Download</h3>
-      <input type="text" id="linkInput" placeholder="Paste YouTube link here..." />
-      <select id="formatSelect">
-        <option value="audio">MP3 (Audio)</option>
-        <option value="video">MP4 (Video)</option>
-      </select>
-      <button onclick="downloadByLink()">Download</button>
-    </div>
-
-    <!-- 🎧 Search Results -->
-    <div id="results" class="results-area">
-      <p>Type a song name and tap Search</p>
-    </div>
-
+    <!-- 📜 Footer -->
     <footer>
       <p>&copy; 2025 Lord Rahl Music Empire 👑</p>
     </footer>
