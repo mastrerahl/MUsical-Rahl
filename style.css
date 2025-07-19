@@ -1,4 +1,3 @@
-/* 🎨 Global Royal Theme */
 body {
   margin: 0;
   padding: 0;
@@ -8,37 +7,33 @@ body {
   text-align: center;
 }
 
-/* 👑 Container */
 .container {
   padding: 20px;
-  border-radius: 16px;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-/* 🖼 Banner Image */
 .logo {
-  width: 250px;
+  width: 260px;
   margin: 20px auto;
   display: block;
   border-radius: 16px;
-  box-shadow: 0 0 25px #007bff;
+  box-shadow: 0 0 30px #007bff;
 }
 
-/* 🧠 Search */
 h1 {
-  font-size: 24px;
-  color: gold;
+  font-size: 28px;
   margin-top: 10px;
+  color: gold;
 }
 
 .search-box {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .search-box input {
   padding: 10px;
-  width: 60%;
+  width: 250px;
   border: 2px solid #007bff;
   border-radius: 5px;
   background-color: #111;
@@ -48,7 +43,6 @@ h1 {
 
 .search-box button {
   padding: 10px 20px;
-  margin-left: 10px;
   background-color: #007bff;
   border: none;
   border-radius: 5px;
@@ -56,22 +50,18 @@ h1 {
   color: white;
   cursor: pointer;
   box-shadow: 0 0 10px #007bff;
-  transition: 0.3s;
 }
 
-.search-box button:hover {
-  background-color: gold;
-  color: black;
+.results-area {
+  margin-top: 30px;
+  color: white;
 }
 
-/* 💡 Suggestions */
 .suggestions-area {
   margin-top: 30px;
   background-color: #111;
-  border: 2px solid #007bff;
-  padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 0 20px #007bff;
+  padding: 15px;
 }
 
 .suggestions-area h3 {
@@ -86,15 +76,15 @@ h1 {
 }
 
 .suggestions-list li {
-  display: inline-block;
-  margin: 6px;
-  padding: 8px 14px;
+  padding: 10px;
+  margin: 8px 0;
   background: #000;
   border: 1px solid #007bff;
   border-radius: 8px;
   color: white;
   cursor: pointer;
   transition: 0.2s ease;
+  display: block;
 }
 
 .suggestions-list li:hover {
@@ -103,55 +93,6 @@ h1 {
   font-weight: bold;
 }
 
-/* 🔗 Link Downloader */
-.link-download-area {
-  margin-top: 40px;
-}
-
-.link-download-area input {
-  padding: 10px;
-  width: 60%;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-  background-color: #111;
-  color: white;
-  box-shadow: 0 0 10px #007bff;
-  margin-bottom: 10px;
-}
-
-.link-download-area select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid #007bff;
-  margin-left: 10px;
-  background-color: #000;
-  color: white;
-}
-
-.link-download-area button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 10px #007bff;
-}
-
-.link-download-area button:hover {
-  background: gold;
-  color: black;
-}
-
-/* 🎧 Results */
-.results-area {
-  margin-top: 40px;
-  color: white;
-}
-
-/* 👣 Footer */
 footer {
   margin-top: 60px;
   font-size: 14px;
