@@ -1,3 +1,4 @@
+/* 🎨 Global Royal Theme */
 body {
   margin: 0;
   padding: 0;
@@ -7,37 +8,37 @@ body {
   text-align: center;
 }
 
+/* 👑 Container */
 .container {
   padding: 20px;
-  border: none;               /* ❌ No border */
-  border-radius: 0;           /* ❌ No rounded box */
-  margin: 0 auto;             /* Centered */
+  border-radius: 16px;
   max-width: 600px;
-  box-shadow: none;           /* ❌ Remove all outer shadow */
-  background-color: transparent;
+  margin: 0 auto;
 }
 
+/* 🖼 Banner Image */
 .logo {
-  width: 260px;
+  width: 250px;
   margin: 20px auto;
   display: block;
   border-radius: 16px;
-  box-shadow: 0 0 30px #007bff; /* ✅ Keep image glow */
+  box-shadow: 0 0 25px #007bff;
 }
 
+/* 🧠 Search */
 h1 {
-  font-size: 28px;
-  margin-top: 10px;
+  font-size: 24px;
   color: gold;
+  margin-top: 10px;
 }
 
 .search-box {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .search-box input {
   padding: 10px;
-  width: 250px;
+  width: 60%;
   border: 2px solid #007bff;
   border-radius: 5px;
   background-color: #111;
@@ -47,6 +48,7 @@ h1 {
 
 .search-box button {
   padding: 10px 20px;
+  margin-left: 10px;
   background-color: #007bff;
   border: none;
   border-radius: 5px;
@@ -54,8 +56,15 @@ h1 {
   color: white;
   cursor: pointer;
   box-shadow: 0 0 10px #007bff;
+  transition: 0.3s;
 }
 
+.search-box button:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* 💡 Suggestions */
 .suggestions-area {
   margin-top: 30px;
   background-color: #111;
@@ -77,8 +86,9 @@ h1 {
 }
 
 .suggestions-list li {
-  padding: 10px;
-  margin: 6px 0;
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 14px;
   background: #000;
   border: 1px solid #007bff;
   border-radius: 8px;
@@ -93,11 +103,55 @@ h1 {
   font-weight: bold;
 }
 
-.results-area {
-  margin-top: 30px;
+/* 🔗 Link Downloader */
+.link-download-area {
+  margin-top: 40px;
+}
+
+.link-download-area input {
+  padding: 10px;
+  width: 60%;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #111;
+  color: white;
+  box-shadow: 0 0 10px #007bff;
+  margin-bottom: 10px;
+}
+
+.link-download-area select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #007bff;
+  margin-left: 10px;
+  background-color: #000;
   color: white;
 }
 
+.link-download-area button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px #007bff;
+}
+
+.link-download-area button:hover {
+  background: gold;
+  color: black;
+}
+
+/* 🎧 Results */
+.results-area {
+  margin-top: 40px;
+  color: white;
+}
+
+/* 👣 Footer */
 footer {
   margin-top: 60px;
   font-size: 14px;
